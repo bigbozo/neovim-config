@@ -1,13 +1,20 @@
 return {
   'nvim-telescope/telescope.nvim', tag = '0.1.6',
   dependencies = { 'nvim-lua/plenary.nvim' },
-  opts = {
-    defaults = {
-      layout_strategy = 'horizontal',
-      layout_config = { height = 0.95, width = 1.0 },
-    },
-  },
   config = function()
+    require('telescope').setup{
+      defaults = {
+        layout_strategy = "horizontal",
+        layout_config = {
+          horizontal = {
+            preview_width = .6,
+            prompt_position="bottom",
+            height = vim.o.lines,
+            width = vim.o.columns,
+          },
+        }
+      }
+    }
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
