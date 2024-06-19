@@ -22,7 +22,8 @@ return {
     }})
 
     vim.api.nvim_create_autocmd({'BufNew', 'BufEnter'}, {
-      pattern = { '*.p8', '*.lua'},
+      -- When run for all vim-lua files it throws tons of warning for global vim
+      pattern = { '*.p8', '*/carts/*.lua' },
       callback = function(args)
         vim.lsp.start({
             name = 'pico8-ls',
