@@ -10,4 +10,4 @@ opts.number=true -- zeige Zeilennummern an
 opts.expandtab=true  -- expandiere <Tab> zu Leerzeichen
 opts.smartindent=true -- was ist das? keine echte Ahnung
 
-
+vim.g.mapleader = ' '
