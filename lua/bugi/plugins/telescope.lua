@@ -16,11 +16,14 @@ return {
       }
     }
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-    vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-    vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-    vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "find files" })
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "live grep" })
+    vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "list buffers" })
     -- Disable folding in Telescope's result window.
+    vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "show help" })
+    vim.keymap.set('n', '<leader>fj', builtin.jumplist, { desc = "Show jumplist" })
+    vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = "Show keymaps" })
+    vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = "Show oldfiles" })
     vim.api.nvim_create_autocmd("FileType", { pattern = "TelescopeResults", command = [[setlocal nofoldenable]] })
   end
 }
