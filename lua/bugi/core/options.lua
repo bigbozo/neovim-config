@@ -7,6 +7,7 @@ opts.foldmethod="indent" -- Folding auf Basis der Code-Einrueckung
 opts.foldcolumn="1" -- zeige die +/- Spalte an
 opts.foldlevel=3
 opts.number=true -- zeige Zeilennummern an
+opts.relativenumber=true
 opts.expandtab=true  -- expandiere <Tab> zu Leerzeichen
 opts.smartindent=true -- was ist das? keine echte Ahnung
 
