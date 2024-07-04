@@ -24,6 +24,8 @@ return {
     vim.keymap.set('n', '<leader>fj', builtin.jumplist, { desc = "Show jumplist" })
     vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = "Show keymaps" })
     vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = "Show oldfiles" })
+    vim.keymap.set('n', '<leader>fr', builtin.registers, { desc = "Show registers" })
+    
     vim.api.nvim_create_autocmd("FileType", { pattern = "TelescopeResults", command = [[setlocal nofoldenable]] })
   end
 }
