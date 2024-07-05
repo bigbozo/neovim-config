@@ -5,7 +5,7 @@ return {
     local configs = require("nvim-treesitter.configs")
     -- treesitter
     -- you need to specify treesitter compiler for c++*
-    require("nvim-treesitter.install").compilers = { "gcc-14" }
+    require("nvim-treesitter.install").compilers = { "gcc-12" }
 
       configs.setup({
           ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "php" },
